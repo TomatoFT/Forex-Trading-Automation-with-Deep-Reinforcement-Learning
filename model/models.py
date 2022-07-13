@@ -213,7 +213,7 @@ def run_ensemble_strategy(df, unique_trade_date, rebalance_window, validation_wi
         # print("==============Model Training===========")
 
         print("======TD3 Training========")
-        model_td3 = train_TD3(env_train, model_name="TD3_30k_dow_{}".format(i), timesteps=20000)
+        model_td3 = train_TD3(env_train, model_name="TD3_30k_result_{}".format(i), timesteps=2000)
         print("======TD3 Validation from: ", unique_trade_date[i - rebalance_window - validation_window], "to ",
               unique_trade_date[i - rebalance_window])
         DRL_validation(model=model_td3, test_data=validation, test_env=env_val, test_obs=obs_val)
@@ -221,7 +221,7 @@ def run_ensemble_strategy(df, unique_trade_date, rebalance_window, validation_wi
         print("TD3 Sharpe Ratio: ", sharpe_td3)
 
         print("======PPO Training========")
-        model_ppo = train_PPO(env_train, model_name="PPO_100k_dow_{}".format(i), timesteps=20000)
+        model_ppo = train_PPO(env_train, model_name="PPO_100k_result_{}".format(i), timesteps=2000)
         print("======PPO Validation from: ", unique_trade_date[i - rebalance_window - validation_window], "to ",
               unique_trade_date[i - rebalance_window])
         DRL_validation(model=model_ppo, test_data=validation, test_env=env_val, test_obs=obs_val)
@@ -229,7 +229,7 @@ def run_ensemble_strategy(df, unique_trade_date, rebalance_window, validation_wi
         print("PPO Sharpe Ratio: ", sharpe_ppo)
 
         print("======DDPG Training========")
-        model_ddpg = train_DDPG(env_train, model_name="DDPG_10k_dow_{}".format(i), timesteps=20000)
+        model_ddpg = train_DDPG(env_train, model_name="DDPG_10k_result_{}".format(i), timesteps=2000)
         #model_ddpg = train_TD3(env_train, model_name="DDPG_10k_dow_{}".format(i), timesteps=20000)
         print("======DDPG Validation from: ", unique_trade_date[i - rebalance_window - validation_window], "to ",
               unique_trade_date[i - rebalance_window])
@@ -238,7 +238,7 @@ def run_ensemble_strategy(df, unique_trade_date, rebalance_window, validation_wi
 
 
         print("======ACKTR Training========")
-        model_acktr = train_ACKTR(env_train, model_name="ACKTR_10k_dow_{}".format(i), timesteps=20000)
+        model_acktr = train_ACKTR(env_train, model_name="ACKTR_10k_result_{}".format(i), timesteps=2000)
         #model_acktr = train_TD3(env_train, model_name="ACKTR_10k_dow_{}".format(i), timesteps=20000)
         print("======ACKTR Validation from: ", unique_trade_date[i - rebalance_window - validation_window], "to ",
               unique_trade_date[i - rebalance_window])
@@ -311,4 +311,4 @@ def run_ensemble_strategy(df, unique_trade_date, rebalance_window, validation_wi
         ############## Trading ends ##############
         compare_model.to_csv('compare_model.csv')
     end = time.time()
-    print("Ensemble Strategy took: ", (end - start) / 60, " minutes")# common library
+    print("Ensemble Strategy took: ", (end - start) / 60, " minutes")
