@@ -35,7 +35,7 @@ class ForexEnvValidation(gym.Env):
         self.action_space = spaces.Box(low = -1, high = 1,shape = (STOCK_DIM,)) 
         # Shape = 181: [Current Balance]+[prices 1-30]+[owned shares 1-30] 
         # +[macd 1-30]+ [rsi 1-30] + [ema 1-30] + [boll 1-30]
-        self.observation_space = spaces.Box(low=0, high=np.inf, shape = (181,))
+        self.observation_space = spaces.Box(low=0, high=np.inf, shape = (241,))
         # load data from a pandas dataframe
         self.data = self.df.loc[self.day,:]
         self.terminal = False     
@@ -47,7 +47,9 @@ class ForexEnvValidation(gym.Env):
                       self.data.macd.values.tolist() + \
                       self.data.rsi.values.tolist() + \
                       self.data.ema.values.tolist() + \
-                      self.data.boll.values.tolist()
+                      self.data.boll.values.tolist() +\
+                      self.data.StRsi.values.tolist() +\
+                      self.data.smma.values.tolist()
         # initialize reward
         self.reward = 0
         self.turbulence = 0
@@ -180,7 +182,9 @@ class ForexEnvValidation(gym.Env):
                     self.data.macd.values.tolist() + \
                     self.data.rsi.values.tolist() + \
                     self.data.ema.values.tolist() + \
-                    self.data.boll.values.tolist()
+                    self.data.boll.values.tolist() +\
+                      self.data.StRsi.values.tolist() +\
+                      self.data.smma.values.tolist()
             
             end_total_asset = self.state[0]+ \
             sum(np.array(self.state[1:(STOCK_DIM+1)])*np.array(self.state[(STOCK_DIM+1):(STOCK_DIM*2+1)]))
@@ -213,7 +217,9 @@ class ForexEnvValidation(gym.Env):
                       self.data.macd.values.tolist() + \
                       self.data.rsi.values.tolist()  + \
                       self.data.ema.values.tolist()  + \
-                      self.data.boll.values.tolist() 
+                      self.data.boll.values.tolist() +\
+                      self.data.StRsi.values.tolist() +\
+                      self.data.smma.values.tolist()
         print('adjcp: ' ,len(self.data.adjcp.values.tolist()))  
         return self.state
     

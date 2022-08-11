@@ -59,6 +59,8 @@ def add_technical_indicator(df):
     rsi = pd.DataFrame()
     ema = pd.DataFrame()
     boll = pd.DataFrame()
+    StRsi = pd.DataFrame()
+    smma = pd.DataFrame()
 
     #temp = stock[stock.tic == unique_ticker[0]]['macd']
     for i in range(len(unique_ticker)):
@@ -79,11 +81,23 @@ def add_technical_indicator(df):
         temp_boll = pd.DataFrame(temp_boll)
         boll = boll.append(temp_boll, ignore_index=True)
 
+        ## Stochastic RSI
+        temp_StRsi = stock[stock.tic == unique_ticker[i]]['stochrsi']
+        temp_StRsi = pd.DataFrame(temp_StRsi)
+        StRsi = StRsi.append(temp_StRsi, ignore_index=True)
+
+        ## SMMA - Smoothed Moving Average
+        temp_smma = stock[stock.tic == unique_ticker[i]]['close_7_smma']
+        temp_smma = pd.DataFrame(temp_smma)
+        smma = smma.append(temp_smma, ignore_index=True)
+ #ád
 
     df['macd'] = macd
     df['rsi'] = rsi
     df['ema'] = ema
     df['boll'] = boll
+    df['StRsi'] = StRsi 
+    df['smma'] = smma
 
     return df
 
