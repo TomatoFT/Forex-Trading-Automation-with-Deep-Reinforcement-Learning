@@ -85,6 +85,7 @@ def add_technical_indicator(df):
         temp_StRsi = stock[stock.tic == unique_ticker[i]]['stochrsi']
         temp_StRsi = pd.DataFrame(temp_StRsi)
         StRsi = StRsi.append(temp_StRsi, ignore_index=True)
+        
 
         ## SMMA - Smoothed Moving Average
         temp_smma = stock[stock.tic == unique_ticker[i]]['close_7_smma']
