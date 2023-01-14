@@ -2,7 +2,7 @@
 <h1>How to run</h1>
 <p>Just open the ipynb file in google colab and Ctrl F9 to run all the code</p>
 
-<h1>PUBLICATION</h1>
+<h1>Publication</h1>
 <p>We use this project to have the publication in RIVF 2021 conference. For more about the methods or the implementation of the project you can read the paper with information below. (DOI is only available in March 2022)</p>
 
 ```
