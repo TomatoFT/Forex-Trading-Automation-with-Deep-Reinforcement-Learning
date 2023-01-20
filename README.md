@@ -1,19 +1,23 @@
 # Forex Trading Automation with Deep Reinforcement Learning
 <h1>How to run</h1>
+
 ### Clone the project
 ```
 !git clone https://github.com/TomatoFT/Forex-Trading-Automation-with-Deep-Reinforcement-Learning
 cd Forex-Trading-Automation-with-Deep-Reinforcement-Learning
 ```
+
 ### Install some package and dependancies
 ```
 sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev libgl1-mesa-glx
 pip install -r requirements.txt
 ```
+
 ### Run Deep Reinforcement learning methods
 ```
 python run_DRL.py
 ```
+
 ### Run visualization
 ```
 python run_visualization.py
