@@ -1,5 +1,6 @@
 # Forex Trading Automation with Deep Reinforcement Learning
 <h1>How to run</h1>
+You can use the .ipynb file to run the project 
 
 ### Clone the project
 ```
