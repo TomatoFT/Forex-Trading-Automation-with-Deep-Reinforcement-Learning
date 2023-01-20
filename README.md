@@ -7,9 +7,16 @@
 cd Forex-Trading-Automation-with-Deep-Reinforcement-Learning
 ```
 
+### Create the Anaconda Environment
+```
+conda create --name Forex
+conda activate Forex
+```
+
 ### Install some package and dependancies
 ```
 sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev libgl1-mesa-glx
+conda install python=3.7 anaconda=custom
 pip install -r requirements.txt
 ```
 
@@ -18,9 +25,9 @@ pip install -r requirements.txt
 python run_DRL.py
 ```
 
-### Run visualization
+### Exit the Anaconda Environment
 ```
-python run_visualization.py
+conda deactivate
 ```
 
 <h1>Publication</h1>
