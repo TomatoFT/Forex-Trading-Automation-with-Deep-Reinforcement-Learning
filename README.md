@@ -1,6 +1,23 @@
 # Forex Trading Automation with Deep Reinforcement Learning
 <h1>How to run</h1>
-<p>Just open the ipynb file in google colab and Ctrl F9 to run all the code</p>
+### Clone the project
+```
+!git clone https://github.com/TomatoFT/Forex-Trading-Automation-with-Deep-Reinforcement-Learning
+cd Forex-Trading-Automation-with-Deep-Reinforcement-Learning
+```
+### Install some package and dependancies
+```
+sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev libgl1-mesa-glx
+pip install -r requirements.txt
+```
+### Run Deep Reinforcement learning methods
+```
+python run_DRL.py
+```
+### Run visualization
+```
+python run_visualization.py
+```
 
 <h1>Publication</h1>
 <p>We use this project to have the publication in RIVF 2021 conference. For more about the methods or the implementation of the project you can read the paper with information below. (DOI is only available in March 2022)</p>
