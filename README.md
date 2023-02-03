@@ -32,7 +32,7 @@ conda deactivate
 ```
 
 <h1>Publication</h1>
-<p>We use this project to have the publication in RIVF 2021 conference. For more about the methods or the implementation of the project you can read the paper with information below. (DOI is only available in March 2022)</p>
+<p>We use this project to have the publication in RIVF 2021 conference. For more about the methods or the implementation of the project you can read the paper with information below.</p>
 
 ```
 @article{Deep Reinforcement Learning methods for Automation Forex Trading,
