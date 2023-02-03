@@ -4,7 +4,7 @@ You can use the .ipynb file to run the project
 
 ### Clone the project
 ```
-!git clone https://github.com/TomatoFT/Forex-Trading-Automation-with-Deep-Reinforcement-Learning
+git clone https://github.com/TomatoFT/Forex-Trading-Automation-with-Deep-Reinforcement-Learning
 cd Forex-Trading-Automation-with-Deep-Reinforcement-Learning
 ```
 
@@ -37,7 +37,7 @@ conda deactivate
 ```
 @article{Deep Reinforcement Learning methods for Automation Forex Trading,
   author = {Tan Chau, Vu Ngo-Duc, Tri Nguyen-Minh, Duc Nguyen-Tran-Anh and Hop Do-Trong},
-  doi = {},
+  doi = {https://doi.org/10.1109/RIVF55975.2022.10013861},
   Conference = {RIVF},
   month = {11},
   pages = {1--6},
