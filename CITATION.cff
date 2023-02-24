@@ -1,9 +1,9 @@
-@article{Deep Reinforcement Learning methods for Automation Forex Trading,
-  author = {Tan Chau, Vu Ngo-Duc, Tri Nguyen-Minh, Duc Nguyen-Tran-Anh and Hop Do-Trong},
-  doi = {},
-  Conference = {RIVF},
-  month = {11},
-  pages = {1--6},
-  title = {{Deep Reinforcement Learning methods for Automation Forex Trading}},
-  year = {2022}
-}
+@INPROCEEDINGS{10013861,
+  author={Chau, Tan and Nguyen, Minh-Tri and Ngo, Duc-Vu and Nguyen, Anh-Duc T. and Do, Trong-Hop},
+  booktitle={2022 RIVF International Conference on Computing and Communication Technologies (RIVF)}, 
+  title={Deep Reinforcement Learning methods for Automation Forex Trading}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={671-676},
+  doi={10.1109/RIVF55975.2022.10013861}}
