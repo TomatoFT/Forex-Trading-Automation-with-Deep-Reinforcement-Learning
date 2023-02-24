@@ -35,15 +35,15 @@ conda deactivate
 <p>We use this project to have the publication in RIVF 2022 conference. For more about the methods or the implementation of the project you can read the paper with information below.</p>
 
 ```
-@article{Deep Reinforcement Learning methods for Automation Forex Trading,
-  author = {Tan Chau, Vu Ngo-Duc, Tri Nguyen-Minh, Duc Nguyen-Tran-Anh and Hop Do-Trong},
-  doi = {https://doi.org/10.1109/RIVF55975.2022.10013861},
-  Conference = {RIVF},
-  month = {11},
-  pages = {1--6},
-  title = {{Deep Reinforcement Learning methods for Automation Forex Trading}},
-  year = {2022}
-}
+@INPROCEEDINGS{10013861,
+  author={Chau, Tan and Nguyen, Minh-Tri and Ngo, Duc-Vu and Nguyen, Anh-Duc T. and Do, Trong-Hop},
+  booktitle={2022 RIVF International Conference on Computing and Communication Technologies (RIVF)}, 
+  title={Deep Reinforcement Learning methods for Automation Forex Trading}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={671-676},
+  doi={10.1109/RIVF55975.2022.10013861}}
 ```
 
  <h1>NOTICE</h1>
